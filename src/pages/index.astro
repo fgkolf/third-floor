@@ -1,7 +1,43 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import shopImage from "../assets/images/shop.png";
 ---
 
 <Layout>
-  <div class="text-3xl font-bold underline bg-red-700">Hello world!</div>
+  <header
+    class="relative w-full h-screen bg-cover bg-center"
+    style={`background-image: url(${shopImage.src});`}
+  >
+    <div class="absolute inset-0 flex items-center justify-center bg-black/30">
+      <h1 class="text-5xl text-white font-bold p-8">Welcome to Our Shop</h1>
+    </div>
+  </header>
+  <main class="p-8">
+    <section id="about" class="my-8">
+      <h2 class="text-3xl font-bold mb-4">About Us</h2>
+      <p>Information about the shop...</p>
+    </section>
+    <section id="services" class="my-8">
+      <h2 class="text-3xl font-bold mb-4">Services & Prices</h2>
+      <ul>
+        <li>Haircut - $20</li>
+        <li>Shave - $15</li>
+        <li>Beard Trim - $10</li>
+      </ul>
+    </section>
+    <section id="location" class="my-8">
+      <h2 class="text-3xl font-bold mb-4">Location</h2>
+      <p>123 Barber St, City, Country</p>
+    </section>
+    <section id="hours" class="my-8">
+      <h2 class="text-3xl font-bold mb-4">Working Hours</h2>
+      <p>Mon-Fri: 9am - 7pm</p>
+      <p>Sat: 9am - 5pm</p>
+      <p>Sun: Closed</p>
+    </section>
+    <section id="booking" class="my-8">
+      <h2 class="text-3xl font-bold mb-4">Booking</h2>
+      <p>Booking system coming soon...</p>
+    </section>
+  </main>
 </Layout>
