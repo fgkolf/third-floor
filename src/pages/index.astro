@@ -1,43 +1,94 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import shopImage from "../assets/images/shop.png";
+import PriceList from "../components/PriceList.astro";
+import ContactDetails from "../components/ContactDetails.astro";
 ---
 
-<Layout>
-  <header
-    class="relative w-full h-screen bg-cover bg-center"
-    style={`background-image: url(${shopImage.src});`}
-  >
-    <div class="absolute inset-0 flex items-center justify-center bg-black/30">
-      <h1 class="text-5xl text-white font-bold p-8">Welcome to Our Shop</h1>
+<Layout title="home">
+  <section class="hero text-center">
+    <h1 class="text-3xl sm:text-5xl font-semibold">
+      Welcome to
+      <span class="branded-text"> 3rd floor </span>
+    </h1>
+    <p class="max-w-2xl text-lg">Your favorite barber shop</p>
+
+    <div class="flex gap-6 mt-3">
+      <a class="button" href="/"> <span>Κλείσε Ραντεβού</span></a>
+      <a class="button" href="/"> <span>Επικοινωνία</span></a>
     </div>
-  </header>
-  <main class="p-8">
-    <section id="about" class="my-8">
-      <h2 class="text-3xl font-bold mb-4">About Us</h2>
-      <p>Information about the shop...</p>
-    </section>
-    <section id="services" class="my-8">
-      <h2 class="text-3xl font-bold mb-4">Services & Prices</h2>
-      <ul>
-        <li>Haircut - $20</li>
-        <li>Shave - $15</li>
-        <li>Beard Trim - $10</li>
-      </ul>
-    </section>
-    <section id="location" class="my-8">
-      <h2 class="text-3xl font-bold mb-4">Location</h2>
-      <p>123 Barber St, City, Country</p>
-    </section>
-    <section id="hours" class="my-8">
-      <h2 class="text-3xl font-bold mb-4">Working Hours</h2>
-      <p>Mon-Fri: 9am - 7pm</p>
-      <p>Sat: 9am - 5pm</p>
-      <p>Sun: Closed</p>
-    </section>
-    <section id="booking" class="my-8">
-      <h2 class="text-3xl font-bold mb-4">Booking</h2>
-      <p>Booking system coming soon...</p>
-    </section>
-  </main>
+  </section>
+
+  <section class="relative py-12 px-[8%]">
+    <PriceList />
+    <span class="lights top-1/2 left-1/3"></span>
+  </section>
+
+  <section class="relative py-12 px-[8%]">
+    <ContactDetails />
+  </section>
 </Layout>
+
+<style>
+  .button {
+    width: 140px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid;
+    text-transform: uppercase;
+    z-index: 1;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button::before,
+  .button::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 70px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background: linear-gradient(10deg, saddlebrown, sandybrown);
+    transition: 1s ease;
+  }
+
+  .button::before {
+    top: -1em;
+    left: -1em;
+  }
+
+  .button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+  }
+
+  .button:hover::before,
+  .button:hover::after {
+    height: 410px;
+    width: 410px;
+  }
+
+  .price-item {
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px var(--brand-color);
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .price-item h3 {
+    margin-bottom: 5px;
+  }
+</style>
