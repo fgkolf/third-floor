@@ -1,0 +1,19 @@
+<div id="map-wrapper">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d512.0794991085087!2d23.75524388835559!3d38.01250782816203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1a35277f9d5cd%3A0xedc6e38b0a2485f!2sMiss%20Monkey!5e0!3m2!1sen!2sgr!4v1743880949324!5m2!1sen!2sgr"
+    width="600px"
+    height="400px"
+    style="border:0;border-radius:1rem;filter:invert(90%) hue-rotate(180deg)"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<script>
+  const viewportWidth = document.documentElement.clientWidth;
+  if (viewportWidth <= 600) {
+    const mapIframe = document.querySelector("#map-wrapper iframe");
+    mapIframe.width = viewportWidth - 16 + "px";
+    mapIframe.height = viewportWidth * 0.66 + "px";
+  }
+</script>

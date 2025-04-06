@@ -3,11 +3,6 @@
 
 @tailwind utilities;
 
-/* noinspection ALL */
-@view-transition {
-    navigation: auto;
-}
-
 :root {
     --bg-color:#000;
     --base-color: #f8f5f2;
@@ -27,6 +22,11 @@ body {
     grid-template-rows: auto 1fr auto;
 }
 
+::selection {
+    color: var(--base-color);
+    background: var(--brand-color);
+}
+
 .hero {
     background-image: linear-gradient(0deg, rgb(0 0 0 / 30%), rgb(0 0 0 / 30%)), url("/images/hero.png");
     width: 100%;
@@ -37,6 +37,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.contact {
+    background-image: linear-gradient(0deg, rgb(0 0 0 / 30%), rgb(0 0 0 / 30%)), url("/images/contact.png");
+    width: 100%;
+    background-position: center;
+    background-size: cover;
 }
 
 .branded-text {

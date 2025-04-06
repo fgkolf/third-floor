@@ -5,25 +5,23 @@ import ContactDetails from "../components/ContactDetails.astro";
 ---
 
 <Layout title="home">
-  <section class="hero text-center">
+  <section class="hero text-center mb-12">
     <h1 class="text-3xl sm:text-5xl font-semibold">
       Welcome to
       <span class="branded-text"> 3rd floor </span>
     </h1>
     <p class="max-w-2xl text-lg">Your favorite barber shop</p>
-
     <div class="flex gap-6 mt-3">
-      <a class="button" href="/"> <span>Κλείσε Ραντεβού</span></a>
-      <a class="button" href="/"> <span>Επικοινωνία</span></a>
+      <button class="button">Κλείσε Ραντεβού</button>
+      <button class="button">Επικοινωνία</button>
     </div>
   </section>
 
   <section class="relative py-12 px-[8%]">
     <PriceList />
-    <span class="lights top-1/2 left-1/3"></span>
   </section>
 
-  <section class="relative py-12 px-[8%]">
+  <section class="relative py-12">
     <ContactDetails />
   </section>
 </Layout>
@@ -39,7 +37,7 @@ import ContactDetails from "../components/ContactDetails.astro";
     cursor: pointer;
     transition: 0.5s;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
     border: 1px solid;
     text-transform: uppercase;
     z-index: 1;
@@ -77,18 +75,5 @@ import ContactDetails from "../components/ContactDetails.astro";
   .button:hover::after {
     height: 410px;
     width: 410px;
-  }
-
-  .price-item {
-    padding: 8px;
-    border-radius: 10px;
-    box-shadow: 0 2px 2px var(--brand-color);
-    text-align: center;
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .price-item h3 {
-    margin-bottom: 5px;
   }
 </style>

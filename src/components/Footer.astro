@@ -4,7 +4,7 @@ import Social from "./Social.astro";
 const year = new Date().getFullYear();
 ---
 
-<footer class="w-full text-white px-[8%] py-5 flex flex-col">
+<footer class="relative w-full text-white px-[8%] pt-12 pb-2">
   <article class="flex gap-5 justify-between flex-wrap">
     <div class="flex flex-col gap-3">
       <h3 class="font-semibold branded-text">thirdfloor</h3>
@@ -26,7 +26,7 @@ const year = new Date().getFullYear();
       </div>
     </div>
   </article>
-  <article class="flex align-end">
+  <article class="flex pt-16 items-center justify-center">
     <div class="text-sm">
       <span>thirdfloor</span>
       <span>&copy;</span>
@@ -35,12 +35,3 @@ const year = new Date().getFullYear();
   </article>
   <span class="lights top-1/2 right-1/8"></span>
 </footer>
-
-<style>
-  footer {
-    position: relative;
-    backdrop-filter: blur(0px) saturate(100%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-</style>
