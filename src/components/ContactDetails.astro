@@ -11,8 +11,8 @@ const contactDetails = {
     { day: "Κυριακή", hours: "Closed" },
   ],
   social: [
-    { name: "Instagram", url: "https://www.instagram.com/yourprofile" },
-    { name: "Facebook", url: "https://www.facebook.com/yourprofile" },
+    { name: "i: @3rdfloor", url: "https://www.instagram.com/yourprofile" },
+    { name: "f: @3rdfloor", url: "https://www.facebook.com/yourprofile" },
   ],
 };
 
@@ -26,7 +26,7 @@ const contactDetailClass =
   >
     <div class="max-sm:w-[70%] grid grid-cols-1 sm:grid-cols-2 gap-12">
       <div class={`${contactDetailClass}`}>
-        <img class="w-10" src="/images/contact-phone.svg" alt="phone" />
+        <img class="w-6" src="/images/contact/phone.png" alt="phone" />
         <div>
           {
             contactDetails.phones.map((phone) => (
@@ -41,11 +41,11 @@ const contactDetailClass =
         </div>
       </div>
       <div class={`${contactDetailClass}`}>
-        <img class="w-10" src="/images/contact-location.svg" alt="address" />
+        <img class="w-6" src="/images/contact/location.png" alt="address" />
         <p>{contactDetails.address}</p>
       </div>
       <div class={`${contactDetailClass}`}>
-        <img class="w-10" src="/images/contact-clock.svg" alt="working hours" />
+        <img class="w-6" src="/images/contact/clock.png" alt="working hours" />
         <ul>
           {
             contactDetails.workingHours.map(({ day, hours }) => (
@@ -58,8 +58,8 @@ const contactDetailClass =
       </div>
       <div class={`${contactDetailClass}`}>
         <img
-          class="w-10"
-          src="/images/instagram.svg"
+          class="w-6"
+          src="/images/contact/social.png"
           alt="social media links"
         />
         <div>

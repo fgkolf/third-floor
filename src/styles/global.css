@@ -40,7 +40,7 @@ body {
 }
 
 .contact {
-    background-image: linear-gradient(0deg, rgb(0 0 0 / 30%), rgb(0 0 0 / 30%)), url("/images/contact.png");
+    background-image: linear-gradient(0deg, rgb(0 0 0 / 30%), rgb(0 0 0 / 30%)), url("/images/bottom.png");
     width: 100%;
     background-position: center;
     background-size: cover;
