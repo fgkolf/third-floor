@@ -2,16 +2,15 @@
 import Map from "./Map.astro";
 
 const contactDetails = {
-  phones: ["6981231234", "2131234567"],
-  address: "Σύρου 19 & Ελ. Βενιζέλου, Γαλάτσι 111 47",
+  phones: ["6931972597", "2102133709"],
+  address: "ΣΥΡΟΥ 19 & ΕΛ. ΒΕΝΙΖΕΛΟΥ, ΓΑΛΑΤΣΙ 111 47",
   workingHours: [
-    { day: "Δευτέρα", hours: "Closed" },
-    { day: "Τρίτη - Παρ", hours: "10:00 - 19:00" },
-    { day: "Σάββατο", hours: "10:00 - 17:00" },
-    { day: "Κυριακή", hours: "Closed" },
+    { day: "ΤΡΙΤΗ - ΠΑΡΑΣΚΕΥΗ", hours: "10:00-14:30 & 17:00-20:30" },
+    { day: "ΣΑΒΒΑΤΟ", hours: "10:00-17:00" },
+    { day: "ΔΕΥΤΕΡΑ", hours: "ΚΛΕΙΣΤΑ" },
   ],
   social: [
-    { name: "i: @3rdfloor", url: "https://www.instagram.com/yourprofile" },
+    { name: "i: @3rdfloor", url: "https://www.instagram.com/th3rd.floor" },
     { name: "f: @3rdfloor", url: "https://www.facebook.com/yourprofile" },
   ],
 };
@@ -49,8 +48,11 @@ const contactDetailClass =
         <ul>
           {
             contactDetails.workingHours.map(({ day, hours }) => (
-              <li>
-                {day}: {hours}
+              <li class="flex justify-between">
+                <>
+                  <span>{day}: </span>
+                  <strong>{hours}</strong>
+                </>
               </li>
             ))
           }

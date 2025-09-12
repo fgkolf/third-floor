@@ -1,12 +1,14 @@
 ---
 import Social from "./Social.astro";
+import { Image } from "astro:assets";
+import logoAlt from "../assets/logo-alt.png";
 ---
 
 <header
-  class="fixed top-0 header w-full px-4 h-20 md:h-14 z-30 flex justify-between bg-[var(--bg-color)] opacity-95"
+  class="fixed top-0 header w-full px-4 py-8 h-15 z-30 flex justify-between transition-colors duration-300 ease-in-out"
 >
-  <a href="/" class="flex items-center font-bold branded-text text-xl z-10"
-    >thirdfloor</a
+  <a href="/" class="flex items-center font-bold branded-text text-l z-10">
+    <Image src={logoAlt} alt="third floor" class="w-[25vw] sm:w-[8vw]" /></a
   >
   <div class="h-full flex items-center gap-2 z-10">
     <Social />
