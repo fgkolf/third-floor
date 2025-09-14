@@ -6,7 +6,7 @@ import { Image } from "astro:assets";
 import logoFull from "../assets/logo-full.png";
 ---
 
-<Layout title="home">
+<Layout>
   <section class="hero text-center mb-12">
     <Image
       src={logoFull}
@@ -81,7 +81,7 @@ import logoFull from "../assets/logo-full.png";
 </style>
 
 <script>
-  document.querySelector("#contact-button").addEventListener("click", (e) => {
+  document.querySelector("#contact-button").addEventListener("click", () => {
     document
       .querySelector("#contact-section")
       .scrollIntoView({ behavior: "smooth" });
