@@ -17,3 +17,15 @@ import logoAlt from "../assets/logo-alt.png";
   <span class="lights top-[7px] left-[20px]"></span>
   <span class="lights top-[5px] left-1/2"></span>
 </header>
+
+<script>
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("bg-[var(--bg-color)]", "opacity-90");
+    } else {
+      header.classList.remove("bg-[var(--bg-color)]", "opacity-90");
+    }
+  });
+</script>

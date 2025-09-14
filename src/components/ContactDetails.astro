@@ -4,11 +4,6 @@ import Map from "./Map.astro";
 const contactDetails = {
   phones: ["6931972597", "2102133709"],
   address: "ΣΥΡΟΥ 19 & ΕΛ. ΒΕΝΙΖΕΛΟΥ, ΓΑΛΑΤΣΙ 111 47",
-  workingHours: [
-    { day: "ΤΡΙΤΗ - ΠΑΡΑΣΚΕΥΗ", hours: "10:00-14:30 & 17:00-20:30" },
-    { day: "ΣΑΒΒΑΤΟ", hours: "10:00-17:00" },
-    { day: "ΔΕΥΤΕΡΑ", hours: "ΚΛΕΙΣΤΑ" },
-  ],
   social: [
     { name: "i: @3rdfloor", url: "https://www.instagram.com/th3rd.floor" },
     { name: "f: @3rdfloor", url: "https://www.facebook.com/yourprofile" },
@@ -23,17 +18,17 @@ const contactDetailClass =
   <div
     class="p-[8%] flex flex-col xl:flex-row gap-12 items-center justify-between"
   >
-    <div class="max-sm:w-[70%] grid grid-cols-1 sm:grid-cols-2 gap-12">
+    <div class="max-sm:w-[75%] grid grid-cols-1 sm:grid-cols-2 gap-12">
       <div class={`${contactDetailClass}`}>
         <img class="w-6" src="/images/contact/phone.png" alt="phone" />
         <div>
           {
             contactDetails.phones.map((phone) => (
               <div>
-                <a class="sm:hidden" href={`tel:${phone}`}>
+                <a class="text-sm sm:hidden" href={`tel:${phone}`}>
                   {phone}
                 </a>
-                <p class="max-sm:hidden">{phone}</p>
+                <p class="text-sm max-sm:hidden">{phone}</p>
               </div>
             ))
           }
@@ -41,21 +36,23 @@ const contactDetailClass =
       </div>
       <div class={`${contactDetailClass}`}>
         <img class="w-6" src="/images/contact/location.png" alt="address" />
-        <p>{contactDetails.address}</p>
+        <p class="text-sm">{contactDetails.address}</p>
       </div>
       <div class={`${contactDetailClass}`}>
         <img class="w-6" src="/images/contact/clock.png" alt="working hours" />
-        <ul>
-          {
-            contactDetails.workingHours.map(({ day, hours }) => (
-              <li class="flex justify-between">
-                <>
-                  <span>{day}: </span>
-                  <strong>{hours}</strong>
-                </>
-              </li>
-            ))
-          }
+        <ul class="grid grid-cols-2 gap-2 w-full">
+          <li class="flex flex-col text-center col-span-2">
+            <span class="text-sm">ΤΡΙΤΗ - ΠΑΡΑΣΚΕΥΗ</span>
+            <strong class="text-sm">10:00-14:30 & 17:00-20:30</strong>
+          </li>
+          <li class="flex flex-col text-center place-items-end mr-1">
+            <span class="text-sm">ΣΑΒΒΑΤΟ</span>
+            <strong class="text-sm">10:00-17:00</strong>
+          </li>
+          <li class="flex flex-col text-center place-items-start ml-1">
+            <span class="text-sm">ΔΕΥΤΕΡΑ</span>
+            <strong class="text-sm">ΚΛΕΙΣΤΑ</strong>
+          </li>
         </ul>
       </div>
       <div class={`${contactDetailClass}`}>
@@ -68,7 +65,7 @@ const contactDetailClass =
           {
             contactDetails.social.map(({ name, url }) => (
               <a
-                class="block"
+                class="block text-sm"
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
