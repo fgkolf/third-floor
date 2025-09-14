@@ -1,7 +1,9 @@
+@import url('./fonts.css');
 /* stylelint-disable-next-line */
 @import "tailwindcss";
 
 @tailwind utilities;
+
 
 :root {
     --bg-color:#000;
