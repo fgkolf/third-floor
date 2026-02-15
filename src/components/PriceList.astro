@@ -6,7 +6,7 @@ const priceList = [
   },
   {
     service: "Beard Trim",
-    price: "5€",
+    price: "8€",
   },
   {
     service: "Shave",
@@ -16,17 +16,13 @@ const priceList = [
     service: "Cut & Beard",
     price: "18€",
   },
-  {
-    service: "Cut & Shave",
-    price: "22€",
-  },
 ];
 ---
 
 <h2 class="text-4xl font-semibold text-center mb-12 branded-text">MENU</h2>
 <ul class="grid md:grid-cols-2 gap-16">
   {
-    priceList.map(({ service, description, price }) => (
+    priceList.map(({ service, price }) => (
       <li class="flex pb-4 border-b-1">
         <div class="flex flex-col gap-4 w-full">
           <h3 class="text-xl font-bold">{service}</h3>
