@@ -1,19 +1,23 @@
 <div id="map-wrapper">
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.4881980221035!2d23.755582000000008!3d38.0123967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1a38bb07aac25%3A0xa78e72be89145ea9!2sThird%20Floor!5e0!3m2!1sel!2sgr!4v1767445525880!5m2!1sel!2sgr"
-    width="600px"
-    height="400px"
     style="border:0;border-radius:1rem;filter:invert(90%) hue-rotate(180deg)"
     allowfullscreen=""
     loading="lazy"
     referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 
-<script>
-  const viewportWidth = document.documentElement.clientWidth;
-  if (viewportWidth <= 600) {
-    const mapIframe = document.querySelector("#map-wrapper iframe");
-    mapIframe.width = viewportWidth - 16 + "px";
-    mapIframe.height = viewportWidth * 0.66 + "px";
+<style>
+  #map-wrapper {
+    width: min(100%, 600px);
+    margin-inline: auto;
+    overflow: hidden;
   }
-</script>
+
+  #map-wrapper iframe {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    height: auto;
+    display: block;
+  }
+</style>
