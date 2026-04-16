@@ -2,22 +2,48 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import SchemaOrg from "../components/SchemaOrg.astro";
 ---
 
 <html lang="el">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Third Floor | Barber Shop Γαλάτσι Αθήνα</title>
     <meta
       name="description"
-      content="Third floor barber shop athens, book your appointment now"
+      content="Third Floor κουρείο στο Γαλάτσι Αθήνα. Κούρεμα, περιποίηση γενειάδας & ξύρισμα. Κλείσε ραντεβού online — Σύρου 19 & Ελ. Βενιζέλου."
     />
     <meta
       name="keywords"
-      content="third floor,3rd floor,glac,galatsi,barber,athens,cuts,haircuts,third floor barber"
+      content="third floor,κουρείο γαλάτσι,κουρείο αθήνα,3rd floor,barber athens,galatsi,κούρεμα,γενειάδα,third floor barber"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://thirdfloor.gr/" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-    <title>THIRD FLOOR</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://thirdfloor.gr/" />
+    <meta property="og:title" content="Third Floor | Barber Shop Γαλάτσι Αθήνα" />
+    <meta
+      property="og:description"
+      content="Third Floor κουρείο στο Γαλάτσι Αθήνα. Κούρεμα, περιποίηση γενειάδας & ξύρισμα. Κλείσε ραντεβού online — Σύρου 19 & Ελ. Βενιζέλου."
+    />
+    <meta property="og:image" content="https://thirdfloor.gr/images/hero.png" />
+    <meta property="og:locale" content="el_GR" />
+    <meta property="og:site_name" content="Third Floor Barber Shop" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Third Floor | Barber Shop Γαλάτσι Αθήνα" />
+    <meta
+      name="twitter:description"
+      content="Third Floor κουρείο στο Γαλάτσι Αθήνα. Κούρεμα, περιποίηση γενειάδας & ξύρισμα. Κλείσε ραντεβού online — Σύρου 19 & Ελ. Βενιζέλου."
+    />
+    <meta
+      name="twitter:image"
+      content="https://thirdfloor.gr/images/hero.png"
+    />
+
+    <SchemaOrg />
     <script
       is:inline
       src="https://cdn.userway.org/widget.js"
